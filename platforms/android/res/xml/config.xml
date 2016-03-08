@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ponyvillelive.pvlmobile" version="2.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Keyboard">
+        <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Media">
+        <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="LocalNotification">
+        <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification" />
+    </feature>
+    <name>Ponyville Live!</name>
+    <description>
+        The mobile application for the Ponyville Live! network.
+
+        Ponyville Live! is the pony world's largest media network, featuring 24/7 pony radio, video, podcasts, convention coverage, and much more. Log in and pony on.
+
+        Ponyville Live! - Bringing Pony People Together
+    </description>
+    <author email="hello@poniverse.net" href="http://poniverse.net">
+        Poniverse
+    </author>
+    <content src="index.html" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="portrait" />
+    <preference name="target-device" value="handset" />
+    <preference name="fullscreen" value="false" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="true" />
+    <preference name="ios-statusbarstyle" value="default" />
+    <preference name="detect-data-types" value="false" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="false" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
+    <icon src="www/img/logo.png" />
+    <icon gap:density="ldpi" gap:platform="android" src="www/res/android/res/drawable-ldpi/Icon.png" />
+    <icon gap:density="mdpi" gap:platform="android" src="www/res/android/res/drawable-mdpi/Icon.png" />
+    <icon gap:density="hdpi" gap:platform="android" src="www/res/android/res/drawable-hdpi/Icon.png" />
+    <icon gap:density="xhdpi" gap:platform="android" src="www/res/android/res/drawable-xhdpi/Icon.png" />
+    <icon gap:platform="ios" height="57" src="www/res/ios/icon/icon-57.png" width="57" />
+    <icon gap:platform="ios" height="72" src="www/res/ios/icon/icon-72.png" width="72" />
+    <icon gap:platform="ios" height="114" src="www/res/ios/icon/icon-57-2x.png" width="114" />
+    <icon gap:platform="ios" height="144" src="www/res/ios/icon/icon-72-2x.png" width="144" />
+    <access origin="http://127.0.0.1*" />
+    <access origin="http://ponyvillelive.com*" subdomains="true" />
+    <access origin="https://ponyvillelive.com*" subdomains="true" />
+    <access origin="*" />
+    <allow-navigation href="*" />
+</widget>

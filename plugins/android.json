@@ -1,0 +1,43 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ponyvillelive.pvlmobile"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ponyvillelive.pvlmobile"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.ponyvillelive.pvlmobile"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.ponyvillelive.pvlmobile"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ponyvillelive.pvlmobile"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ponyvillelive.pvlmobile"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "com.ponyvillelive.pvlmobile"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ponyvillelive.pvlmobile"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ponyvillelive.pvlmobile"
+        },
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "com.ponyvillelive.pvlmobile"
+        }
+    }
+}

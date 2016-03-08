@@ -1,0 +1,21 @@
+<ion-view title="Stations">
+    <ion-content class="has-header">
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="reloadPage()"></ion-refresher>
+        <div class="list">
+            <div ng-repeat="category in stations">
+                <div class="item item-divider"><i class="icon {{category.icon}}"></i> {{category.name}}</div>
+                <a class="item item-avatar-left" ng-repeat="row in category.stations" href="#/app/station/{{row.station.id}}">
+                    <img ng-src="{{row.station.image_url}}">
+                    <span class="item-note"><i class="icon ion-person-stalker"></i> {{row.listeners.current}}</span>
+
+                    <h2>{{row.station.name}}</h2>
+                    <h4 class="subdued">{{row.station.genre}}</h4>
+                    <p>
+                        <b>{{row.current_song.title}}</b><br>
+                        {{row.current_song.artist}}
+                    </p>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
