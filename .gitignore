@@ -1,2 +1,8 @@
-.idea/
-.vagrant/
+node_modules/
+platforms/android/.gradle
+platforms/android/local.properties
+platforms/android/.idea/workspace.xml
+platforms/android/.idea/libraries
+platforms/android.DS_Store
+platforms/android/build
+platforms/android/captures

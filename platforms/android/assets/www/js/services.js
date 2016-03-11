@@ -178,6 +178,7 @@ services.service("radioService", function( $state, $rootScope, $timeout, apiServ
                 title:      station.station.name,
                 sound:      null,
                 ongoing:    true,
+                autoClear:  false,
                 icon: "res://icon",
                 smallIcon: "res://icon"
             });

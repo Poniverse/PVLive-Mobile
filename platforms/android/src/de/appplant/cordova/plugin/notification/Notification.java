@@ -87,6 +87,9 @@ public class Notification {
         this.receiver = receiver != null ? receiver : defaultReceiver;
     }
 
+    // added by tinker to disable dismiss on click
+    public boolean isAutoClear () { return  getOptions().isAutoClear(); }
+
     /**
      * Get application context.
      */

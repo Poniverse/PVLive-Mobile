@@ -72,19 +72,22 @@ services.service("radioService", function( $state, $rootScope, $timeout, apiServ
         if (window.cordova)
         {
             player = new Media(stream.url, function() {
-                console.log("playAudio(): Audio Success");
-            },
-            function(err) {
-                console.error("playAudio(): Audio Error");
-                console.error(err);
+                    console.log("playAudio(): Audio Success: " + stream.url);
+                    this.release();
+                },
+                function(err) {
+                    console.error("playAudio(): Audio Error");
+                    console.error(err);
 
-                stop();
-            },
-            function(status) {
-                console.log(status);
-            });
+                    stop();
+                },
+                function(status) {
+                    console.log(status);
+                });
+                console.log("about to play: " + stream.url);
+                player.play({ playAudioWhenScreenIsLocked : true });
 
-            player.play();
+
         }
         else
         {
@@ -103,6 +106,7 @@ services.service("radioService", function( $state, $rootScope, $timeout, apiServ
 
     function stop()
     {
+        console.log('stop called');
         if (player !== null)
         {
             if (window.cordova)
@@ -168,13 +172,15 @@ services.service("radioService", function( $state, $rootScope, $timeout, apiServ
         {
             window.plugin.notification.local.cancelAll();
 
-            window.plugin.notification.local.add({
+            window.plugin.notification.local.schedule({
                 id:         song.id,
-                message:    song.title+' by '+song.artist,
+                text:    song.title+' by '+ song.artist,
                 title:      station.station.name,
                 sound:      null,
                 ongoing:    true,
-                autoCancel: false
+                autoClear:  false,
+                icon: "res://icon",
+                smallIcon: "res://icon"
             });
         }
     }

@@ -162,8 +162,9 @@ android {
     }
 
     defaultConfig {
-        versionCode cdvVersionCode ?: Integer.parseInt("" + privateHelpers.extractIntFromManifest("versionCode") + "0")
-        applicationId privateHelpers.extractStringFromManifest("package")
+        versionCode 200089
+        applicationId "com.ponyvillelive.pvlmobile"
+        versionName "2.0.8"
 
         if (cdvMinSdkVersion != null) {
             minSdkVersion cdvMinSdkVersion
